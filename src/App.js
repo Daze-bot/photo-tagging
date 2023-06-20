@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { initializeApp } from 'firebase/app';
+import './styles/app.css';
 
 const App = () => {
   const firebaseConfig = {
@@ -16,7 +17,10 @@ const App = () => {
 
   return (
     <BrowserRouter>
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route />
+      </Routes>
     </BrowserRouter>
   )
 }

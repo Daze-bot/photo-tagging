@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'tilt-prism';
+  src: url('../fonts/TiltPrism.ttf');
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -5,4 +10,38 @@
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+.homePage {
+  min-height: 100vh;
+  background-image: url('../imgs/homeBackground.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homePage h1 {
+  color: white;
+  font-size: 6rem;
+  font-family: 'tilt-prism';
+  font-weight: 300;
+  text-align: center;
+}
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuLinks a {
+  text-decoration: none;
+  color: white;
 }

@@ -3,6 +3,11 @@
   src: url('../fonts/TiltPrism.ttf');
 }
 
+@font-face {
+  font-family: 'game-menu';
+  src: url('../fonts/GameMenu.ttf');
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -26,22 +31,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10vh;
 }
 
 .homePage h1 {
   color: white;
-  font-size: 6rem;
+  font-size: 6.5rem;
   font-family: 'tilt-prism';
   font-weight: 300;
   text-align: center;
+  text-shadow: 2px 2px 4px black;
+  margin-top: 10vh;
 }
 
 .menuLinks {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20vh;
+  justify-content: center;
+  align-items: stretch;
+  gap: 5vh;
 }
 
 .menuLinks a {
+  position: relative;
   text-decoration: none;
   color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px 30px;
+  text-shadow: 2px 2px 4px black;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.menuLinks a:hover {
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
+  scale: 1.2;
+  background-color: white;
+  color: black;
+  text-shadow: none;
+}
+
+.menuLinks a:hover::after,
+.menuLinks a:hover::before {
+  position: absolute;
+  content: '';
+  top: 20px;
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent; 
+}
+
+.menuLinks a:hover::before {
+  left: -40px;
+  border-left: 20px solid white; 
+}
+
+.menuLinks a:hover::after {
+  right: -40px;
+  border-right: 20px solid white; 
+}
+
+.menuLinks li {
+  font-family: 'game-menu';
+  font-size: 3rem;
+  font-weight: 300;
 }

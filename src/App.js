@@ -21,11 +21,23 @@ const App = () => {
 
   const [level, setLevel] = useState(1);
 
+  const handleLevelComplete = () => {
+    setLevel(level + 1);
+  }
+
+  const handleGameOver = () => {
+    setLevel(1);
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/game/" element={<Game />}/>
+        <Route path="/game/" element={<Game 
+          level={level}
+          levelComplete={handleLevelComplete}
+          gameOver={handleGameOver}
+        />}/>
         <Route path="/leaderboard/" element={<Leaderboard />}/>
         <Route path="/instructions/" element={<Instructions />}/>
       </Routes>

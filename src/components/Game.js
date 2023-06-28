@@ -1,6 +1,7 @@
 import React from "react";
 import GameHeader from "./GameHeader";
 import Level1 from "./Level1";
+import TestIMG from '../imgs/testIMG.png';
 
 const Game = (props) => {
 
@@ -8,7 +9,7 @@ const Game = (props) => {
     <div className="mainGame">
       <GameHeader 
         level={props.level}
-        target={'tbd'}
+        target={TestIMG}
         gameOver={props.gameOver}
       />
       {props.level === 1 &&

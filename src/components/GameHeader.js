@@ -9,10 +9,13 @@ const GameHeader = (props) => {
         Level {props.level}
       </div>
       <div className="currentTarget">
+        Target:
         <img src={props.target} alt="Current Target"></img>
       </div>
       <Link to={'/'}>
-        <button onClick={props.gameOver}>Main Menu</button>
+        <div className="returnMain" onClick={props.gameOver}>
+          Main Menu
+        </div>
       </Link>
     </div>
   )

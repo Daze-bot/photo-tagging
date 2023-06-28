@@ -31,7 +31,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10vh;
 }
 
 .homePage h1 {
@@ -48,7 +47,6 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20vh;
   justify-content: center;
   align-items: stretch;
   gap: 5vh;
@@ -99,4 +97,24 @@
   font-family: 'game-menu';
   font-size: 3rem;
   font-weight: 300;
+}
+
+.gameHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 95px;
+}
+
+.currentTarget {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.currentTarget img {
+  height: 80px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
 }

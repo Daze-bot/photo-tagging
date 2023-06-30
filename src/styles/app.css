@@ -1,3 +1,7 @@
+:root {
+  --header-blue: #3766bf;
+}
+
 @font-face {
   font-family: 'tilt-prism';
   src: url('../fonts/TiltPrism.ttf');
@@ -99,17 +103,40 @@
   font-weight: 300;
 }
 
+.mainGame {
+  position: relative;
+  min-height: 100vh;
+}
+
 .gameHeader {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 95px;
+  top: 0;
+  position: sticky;
+  background-color: var(--header-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+.gameHeader div {
+  font-family: 'game-menu';
+}
+
+.currentLevel {
+  color: white;
+  font-size: 2.5rem;
 }
 
 .currentTarget {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8) inset;
 }
 
 .currentTarget img {
@@ -117,4 +144,80 @@
   max-width: 100%;
   margin: 0 auto;
   display: block;
+}
+
+.targetTooltip {
+  position: absolute;
+  z-index: 15;
+  background-color: white;
+  pointer-events: none;
+  font-size: 2.5rem;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+  top: 0;
+  left: 95px;
+  width: 110px;
+  height: 80px;
+  text-align: center;
+  font-family: 'game-menu';
+  color: black;
+  line-height: 35px
+}
+
+.targetTooltip::before,
+.targetTooltip::after {
+  content: "\0020";
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: -22px;
+  z-index: 12;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border: solid 22px transparent;
+  border-left: 0;
+  border-right-color: #FFF;
+}
+
+.targetTooltip::before {
+  top: 15px;
+  left: -23px;
+  z-index: 11;
+  border-right-color: black;
+}
+
+.gameHeader a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.gameHeader a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.level {
+  min-height: calc(100vh - 95px);
+  position: relative;
+}
+
+.levelImgContainer {
+  z-index: 1;
+}
+
+.level img {
+  max-width: 100vw;
+  height: 300vh;
+}
+
+#circleCursor {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
 }

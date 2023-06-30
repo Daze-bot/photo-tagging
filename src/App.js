@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { initializeApp } from 'firebase/app';
 import './styles/app.css';
@@ -19,25 +19,11 @@ const App = () => {
 
   initializeApp(firebaseConfig);
 
-  const [level, setLevel] = useState(1);
-
-  const handleLevelComplete = () => {
-    setLevel(level + 1);
-  }
-
-  const handleGameOver = () => {
-    setLevel(1);
-  }
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/game/" element={<Game 
-          level={level}
-          levelComplete={handleLevelComplete}
-          gameOver={handleGameOver}
-        />}/>
+        <Route path="/game/" element={<Game />}/>
         <Route path="/leaderboard/" element={<Leaderboard />}/>
         <Route path="/instructions/" element={<Instructions />}/>
       </Routes>

@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import GameHeader from "./GameHeader";
-import Level1 from "./Level1";
-import TestIMG from '../imgs/testIMG.png';
+import Level from "./Level";
+import levelData from "../data/levelData";
 
 const Game = (props) => {
+  const [level, setLevel] = useState(1);
+  const [levelInfo, setLevelInfo] = useState(levelData.find(x => x.level === level));
+
+  const handleLevelComplete = () => {
+    setLevel(level + 1);
+  }
+
+  const handleGameOver = () => {
+    setLevel(1);
+  }
 
   return (
     <div className="mainGame">
       <GameHeader 
-        level={props.level}
-        target={TestIMG}
-        gameOver={props.gameOver}
+        level={level}
+        target={levelInfo.target}
+        gameOver={handleGameOver}
       />
-      {props.level === 1 &&
-        <Level1 />
-      }
+      <Level 
+        image={levelInfo.image}
+      />
     </div>
   )
 }

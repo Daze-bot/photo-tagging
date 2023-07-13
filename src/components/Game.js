@@ -6,6 +6,20 @@ import levelData from "../data/levelData";
 const Game = (props) => {
   const [level, setLevel] = useState(1);
   const [levelInfo, setLevelInfo] = useState(levelData.find(x => x.level === level));
+  const [timer, setTimer] = useState(0);
+  const [timerRunning, setTimerRunning] = useState(false);
+
+  const startTimer = () => {
+    setTimerRunning(true);
+  }
+
+  const stopTimer = () => {
+    setTimerRunning(false);
+  }
+
+  const resetTimer = () => {
+    setTimer(0);
+  }
 
   const handleLevelComplete = () => {
     setLevel(level + 1);
@@ -13,6 +27,9 @@ const Game = (props) => {
 
   const handleGameOver = () => {
     setLevel(1);
+    stopTimer();
+    props.setFinalTime(timer);
+    resetTimer();
   }
 
   return (
@@ -21,9 +38,17 @@ const Game = (props) => {
         level={level}
         target={levelInfo.target}
         gameOver={handleGameOver}
+        timer={timer}
+        timerRunning={timerRunning}
+        startTimer={startTimer}
+        stopTimer={stopTimer}
       />
       <Level 
         image={levelInfo.image}
+        startTimer={startTimer}
+        setTimer={setTimer}
+        timer={timer}
+        timerRunning={timerRunning}
       />
     </div>
   )

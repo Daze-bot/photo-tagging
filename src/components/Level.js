@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Level = (props) => {
   const [cursorX, setCursorX] = useState(null);
@@ -18,6 +18,18 @@ const Level = (props) => {
     setMouseOnScreen(false);
   }
 
+  useEffect(() => {
+    props.startTimer();
+  }, []);
+
+  useEffect(() => {
+    let intervalID;
+    if (props.timerRunning) {
+      intervalID = setInterval(() => props.setTimer(props.timer + 1), 10);
+    }
+    return () => clearInterval(intervalID);
+  }, [props.timerRunning, props.timer]);
+
   return (
     <div 
       className="level"
@@ -26,7 +38,7 @@ const Level = (props) => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="levelImgContainer">
-        <img src={props.image} alt="Level"></img>
+        <img src={props.image} alt="Level" draggable="false"></img>
       </div>
       {mouseOnScreen &&
         <div 

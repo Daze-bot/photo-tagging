@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { initializeApp } from 'firebase/app';
 import './styles/app.css';
@@ -19,11 +19,19 @@ const App = () => {
 
   initializeApp(firebaseConfig);
 
+  const [finalTime, setFinalTime] = useState(null);
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/game/" element={<Game />}/>
+        <Route 
+          path="/game/" 
+          element={<Game 
+            setFinalTime={setFinalTime}
+            finalTime={finalTime}
+          />}
+        />
         <Route path="/leaderboard/" element={<Leaderboard />}/>
         <Route path="/instructions/" element={<Instructions />}/>
       </Routes>

@@ -126,19 +126,19 @@
 
 .currentLevel {
   color: white;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   display: flex;
-  gap: 40px;
-  width: 35%;
+  align-items: center;
+  gap: 20px;
 }
 
 .gameTimer {
   text-align: start;
-}
-
-.targetContainer {
+  color: white;
+  font-size: 2.5rem;
   display: flex;
-  width: 25%;
+  align-items: center;
+  width: 300px;
 }
 
 .currentTarget {
@@ -215,6 +215,7 @@
   position: relative;
   cursor: none;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .levelImgContainer {
@@ -234,4 +235,5 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.2);
 }

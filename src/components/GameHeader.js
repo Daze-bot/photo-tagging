@@ -20,11 +20,6 @@ const GameHeader = (props) => {
     <div className="gameHeader">
       <div className="currentLevel">
         Level {props.level}
-        <div className="gameTimer">
-          Time: {hours}:{minutes.toString().padStart(2, "0")}:{seconds.toString().padStart(2, "0")}
-        </div>
-      </div>
-      <div className="targetContainer">
         <div
           className="currentTarget"
           onMouseOver={showTooltip}
@@ -34,6 +29,9 @@ const GameHeader = (props) => {
           { hovered &&
             <div className="targetTooltip">Find Me!</div> }
         </div>
+      </div>
+      <div className="gameTimer">
+        Time: {hours}:{minutes.toString().padStart(2, "0")}:{seconds.toString().padStart(2, "0")}
       </div>
       <Link to={'/'}>
         <div className="returnMain" onClick={props.gameOver}>

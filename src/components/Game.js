@@ -39,9 +39,6 @@ const Game = (props) => {
         target={levelInfo.target}
         gameOver={handleGameOver}
         timer={timer}
-        timerRunning={timerRunning}
-        startTimer={startTimer}
-        stopTimer={stopTimer}
       />
       <Level 
         image={levelInfo.image}

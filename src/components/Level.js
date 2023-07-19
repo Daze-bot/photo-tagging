@@ -1,9 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
+import { db } from "./firebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
 
 const Level = (props) => {
   const [cursorX, setCursorX] = useState(null);
   const [cursorY, setCursorY] = useState(null);
   const [mouseOnScreen, setMouseOnScreen] = useState(false);
+  const [target, setTarget] = useState({});
 
   const imgRef = useRef();
 
@@ -20,8 +23,12 @@ const Level = (props) => {
     setMouseOnScreen(false);
   }
 
+  const fetchCoords = async () => {
+    const targetRef = doc(db, 'targets', props.level.toString());
+    const targetSnap = await getDoc(targetRef);
+    setTarget(targetSnap.data());
+  }
 
-  //Successfully found click location regardless of size
   const handleClick = () => {
     const width = imgRef.current.offsetWidth;
     const height = imgRef.current.offsetHeight;
@@ -29,14 +36,20 @@ const Level = (props) => {
     const relX = (cursorX + 50) / width;
     const relY = (cursorY + 50) / height;
 
-    console.log(relX.toFixed(5), relY.toFixed(5));
-  }
-
-  const handleImageClick = async () => {
-
+    const clickLocationX = relX.toFixed(5);
+    const clickLocationY = relY.toFixed(5);
+    
+    // Add the logic here for success/fail clicks
+    if ((Math.abs(target.locationX - clickLocationX) < .018) && 
+        (Math.abs(target.locationY - clickLocationY) < .02)) {
+      console.log('success');
+    } else {
+      console.log('failure');
+    }
   }
 
   useEffect(() => {
+    fetchCoords();
     props.startTimer();
   }, []);
 

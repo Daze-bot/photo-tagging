@@ -46,6 +46,7 @@ const Game = (props) => {
         setTimer={setTimer}
         timer={timer}
         timerRunning={timerRunning}
+        level={level}
       />
     </div>
   )

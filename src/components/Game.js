@@ -9,6 +9,8 @@ const Game = (props) => {
   const [levelInfo, setLevelInfo] = useState(levelData.find(x => x.level === level));
   const [timer, setTimer] = useState(0);
   const [timerRunning, setTimerRunning] = useState(false);
+  const [levelLoaded, setLevelLoaded] = useState(false);
+  const [gameOver, setGameOver] = useState(false);  
 
   const startTimer = () => {
     setTimerRunning(true);
@@ -22,20 +24,26 @@ const Game = (props) => {
     setTimer(0);
   }
 
+  const handleGameComplete = () => {
+    stopTimer();
+    setGameOver(true);
+    props.setFinalTime(timer);
+    alert(`you win! final time was ${readTime(timer)}`);
+  }
+
   const handleLevelComplete = () => {
-    if (level < 3) {
+    if (level < 4) {
+      setLevelLoaded(false);
       stopTimer();
       setLevel(level + 1);
     } else {
-      stopTimer();
-      alert(`you win! final time was ${readTime(timer)}`);
+      handleGameComplete();
     }
   }
 
-  const handleGameOver = () => {
+  const handleMenuClick = () => {
     setLevel(1);
     stopTimer();
-    props.setFinalTime(timer);
     resetTimer();
   }
 
@@ -48,8 +56,9 @@ const Game = (props) => {
       <GameHeader 
         level={level}
         target={levelInfo.target}
-        gameOver={handleGameOver}
+        menuClick={handleMenuClick}
         timer={timer}
+        levelLoaded={levelLoaded}
       />
       <Level 
         image={levelInfo.image}
@@ -59,6 +68,7 @@ const Game = (props) => {
         timerRunning={timerRunning}
         level={level}
         handleLevelComplete={handleLevelComplete}
+        setLevelLoaded={setLevelLoaded}
       />
     </div>
   )

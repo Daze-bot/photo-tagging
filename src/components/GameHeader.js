@@ -15,23 +15,28 @@ const GameHeader = (props) => {
 
   return (
     <div className="gameHeader">
-      <div className="currentLevel">
-        Level {props.level}
-        <div
-          className="currentTarget"
-          onMouseOver={showTooltip}
-          onMouseOut={hideTooltip}
-        >
-          <img src={props.target} alt="Current Target"></img>
-          { hovered &&
-            <div className="targetTooltip">Find Me!</div> }
-        </div>
-      </div>
+      { props.levelLoaded
+        ? <div className="currentLevel">
+            Level {props.level}
+            <div
+              className="currentTarget"
+              onMouseOver={showTooltip}
+              onMouseOut={hideTooltip}
+            >
+              <img src={props.target} alt="Current Target"></img>
+              { hovered &&
+                <div className="targetTooltip">Find Me!</div> }
+            </div>
+          </div>
+        : <div className="currentLevel">
+            Level {props.level} Loading...
+          </div>
+      }
       <div className="gameTimer">
         Time: {readTime(props.timer)}
       </div>
       <Link to={'/'}>
-        <div className="returnMain" onClick={props.gameOver}>
+        <div className="returnMain" onClick={props.menuClick}>
           Menu
         </div>
       </Link>

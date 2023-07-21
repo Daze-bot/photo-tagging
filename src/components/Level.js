@@ -42,7 +42,7 @@ const Level = (props) => {
     // Add the logic here for success/fail clicks
     if ((Math.abs(target.locationX - clickLocationX) < .018) && 
         (Math.abs(target.locationY - clickLocationY) < .02)) {
-      console.log('success');
+      props.handleLevelComplete();
     } else {
       console.log('failure');
     }
@@ -51,7 +51,7 @@ const Level = (props) => {
   useEffect(() => {
     fetchCoords();
     props.startTimer();
-  }, []);
+  }, [props.level]);
 
   useEffect(() => {
     let intervalID;

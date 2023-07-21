@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GameHeader from "./GameHeader";
 import Level from "./Level";
 import levelData from "../data/levelData";
+import readTime from "../utils/readTime";
 
 const Game = (props) => {
   const [level, setLevel] = useState(1);
@@ -22,7 +23,13 @@ const Game = (props) => {
   }
 
   const handleLevelComplete = () => {
-    setLevel(level + 1);
+    if (level < 3) {
+      stopTimer();
+      setLevel(level + 1);
+    } else {
+      stopTimer();
+      alert(`you win! final time was ${readTime(timer)}`);
+    }
   }
 
   const handleGameOver = () => {
@@ -31,6 +38,10 @@ const Game = (props) => {
     props.setFinalTime(timer);
     resetTimer();
   }
+
+  useEffect(() => {
+    setLevelInfo(levelData.find(x => x.level === level));
+  },[level]);
 
   return (
     <div className="mainGame">
@@ -47,6 +58,7 @@ const Game = (props) => {
         timer={timer}
         timerRunning={timerRunning}
         level={level}
+        handleLevelComplete={handleLevelComplete}
       />
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import readTime from "../utils/readTime";
 
 const GameHeader = (props) => {
   const [hovered, setHovered] = useState(false);
@@ -11,10 +12,6 @@ const GameHeader = (props) => {
   const hideTooltip = () => {
     setHovered(false);
   }
-
-  const hours = Math.floor(props.timer / 360000);
-  const minutes = Math.floor((props.timer % 360000) / 6000);
-  const seconds = Math.floor((props.timer % 6000) / 100);
 
   return (
     <div className="gameHeader">
@@ -31,7 +28,7 @@ const GameHeader = (props) => {
         </div>
       </div>
       <div className="gameTimer">
-        Time: {hours}:{minutes.toString().padStart(2, "0")}:{seconds.toString().padStart(2, "0")}
+        Time: {readTime(props.timer)}
       </div>
       <Link to={'/'}>
         <div className="returnMain" onClick={props.gameOver}>

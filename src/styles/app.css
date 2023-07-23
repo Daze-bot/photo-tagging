@@ -120,7 +120,9 @@
   z-index: 50;
 }
 
-.gameHeader div {
+.gameHeader div,
+.leaderboardHeader div,
+.leaderboardHeader h2 {
   font-family: 'game-menu';
 }
 
@@ -200,13 +202,15 @@
   border-right-color: black;
 }
 
-.gameHeader a {
+.gameHeader a,
+.leaderboardHeader a {
   text-decoration: none;
   color: white;
   font-size: 2.5rem;
 }
 
-.gameHeader a:hover {
+.gameHeader a:hover,
+.leaderboardHeader a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -262,4 +266,150 @@
   pointer-events: none;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.leaderboardHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4vw;
+  align-items: center;
+  height: 95px;
+  top: 0;
+  position: sticky;
+  background-color: var(--header-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+.leaderboardHeader h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.returnMain {
+  word-spacing: -8px;
+}
+
+.leaderboardKey,
+.timeListItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw 10px;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.leaderboardKey {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.timeListItem {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.leaderboard ol p {
+  font-family: 'game-menu';
+}
+
+.timeRank {
+  width: 20%;
+  text-align: start;
+}
+
+.timeName {
+  width: 55%;
+  text-align: start;
+  overflow: hidden;
+}
+
+.timeTime {
+  width: 25%;
+  text-align: end;
+}
+
+.gameRecap {
+  min-height: 100vh;
+  background-image: url('../imgs/endGame2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  text-align: center;
+  min-width: 650px;
+}
+
+.gameRecap h2 {
+  font-size: 6rem;
+  font-family: 'game-menu';
+  font-weight: 400;
+  margin-bottom: 12vh;
+  padding-top: 20px;
+}
+
+.gameRecap p {
+  font-size: 3.5rem;
+  font-family: 'game-menu';
+}
+
+.playerNameEntry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+.playerNameEntry label {
+  font-size: 1.5rem;
+}
+
+.playerNameEntry input {
+  text-align: center;
+  border: 1px solid white;
+  outline: none;
+  padding: 8px 0;
+  border-radius: 8px;
+  font-size: 3rem;
+  font-family: 'game-menu';
+  background: none;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.playerNameEntry input:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255);
+}
+
+.playerNameEntry input:focus {
+  box-shadow: 0 0 12px rgba(255, 255, 255);
+}
+
+.gameRecap button {
+  border: 1px solid white;
+  outline: none;
+  padding: 16px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'game-menu';
+  font-size: 2.5rem;
+  background: none;
+  color: white;
+}
+
+.gameRecap button:hover {
+  background-color: rgba(255, 255, 255);
+  color: black;
+}
+
+.gameOverButtons {
+  display: flex;
+  gap: 4vw;
 }

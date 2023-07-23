@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './styles/app.css';
 import Home from "./components/Home";
@@ -7,7 +7,7 @@ import Leaderboard from "./components/Leaderboard";
 import Instructions from './components/Instructions';
 
 const App = () => {
-  const [finalTime, setFinalTime] = useState(null);
+  
 
   return (
     <BrowserRouter>
@@ -15,10 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route 
           path="/game/" 
-          element={<Game 
-            setFinalTime={setFinalTime}
-            finalTime={finalTime}
-          />}
+          element={<Game />}
         />
         <Route path="/leaderboard/" element={<Leaderboard />}/>
         <Route path="/instructions/" element={<Instructions />}/>

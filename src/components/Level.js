@@ -50,10 +50,8 @@ const Level = (props) => {
   const handleClick = () => {
     const width = imgRef.current.offsetWidth;
     const height = imgRef.current.offsetHeight;
-
     const relX = (cursorX + 50) / width;
     const relY = (cursorY + 50) / height;
-
     const clickLocationX = relX.toFixed(5);
     const clickLocationY = relY.toFixed(5);
     
@@ -79,7 +77,7 @@ const Level = (props) => {
 
   useEffect(() => {
     let intervalID;
-    if (props.timerRunning) {
+    if (props.timerRunning && (props.gameOver === false)) {
       intervalID = setInterval(() => props.setTimer(props.timer + 1), 10);
     }
     return () => clearInterval(intervalID);

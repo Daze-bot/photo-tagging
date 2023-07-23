@@ -36,8 +36,8 @@ const GameHeader = (props) => {
         Time: {readTime(props.timer)}
       </div>
       <Link to={'/'}>
-        <div className="returnMain" onClick={props.menuClick}>
-          Menu
+        <div className="returnMain">
+          Main Menu
         </div>
       </Link>
     </div>

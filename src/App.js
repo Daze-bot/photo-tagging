@@ -24,8 +24,8 @@ const App = () => {
           element={<Instructions />}
         />
         <Route 
-          path="/photo-tagging/*"
-          element={<Navigate to="/photo-tagging/"/>}
+          path="*"
+          element={<Home />}
         />
       </Routes>
     </BrowserRouter>

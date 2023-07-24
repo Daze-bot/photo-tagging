@@ -8,7 +8,7 @@ const Instructions = () => {
     <div className="instructions">
       <div className="instructionsHeader">
         <h2>Instructions</h2>
-        <Link to={'/'}>
+        <Link to={'/photo-tagging/'}>
           <div className="returnMain">
             Main Menu
           </div>

@@ -7,18 +7,16 @@ import Leaderboard from "./components/Leaderboard";
 import Instructions from './components/Instructions';
 
 const App = () => {
-  
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/photo-tagging/" element={<Home />} />
         <Route 
           path="/game/" 
           element={<Game />}
         />
-        <Route path="/leaderboard/" element={<Leaderboard />}/>
-        <Route path="/instructions/" element={<Instructions />}/>
+        <Route path="/photo-tagging/leaderboard/" element={<Leaderboard />}/>
+        <Route path="/photo-tagging/instructions/" element={<Instructions />}/>
       </Routes>
     </BrowserRouter>
   )

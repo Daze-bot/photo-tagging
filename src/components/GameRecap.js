@@ -42,7 +42,7 @@ const GameRecap = (props) => {
       {timeSubmitted &&
         <div className="gameOverButtons">
           <button onClick={props.resetGame}>Play Again</button>
-          <Link to={'/'}>
+          <Link to={'/photo-tagging/'}>
             <button>Main Menu</button>
           </Link>
         </div>

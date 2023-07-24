@@ -5,13 +5,13 @@ const Menu = () => {
 
   return (
     <ul className="menuLinks">
-      <Link to={'/game/'}>
+      <Link to={'/photo-tagging/game/'}>
         <li>New Game</li>
       </Link>
-      <Link to={'/leaderboard/'}>
+      <Link to={'/photo-tagging/leaderboard/'}>
         <li>Leaderboard</li>
       </Link>
-      <Link to={'/instructions/'}>
+      <Link to={'/photo-tagging/instructions/'}>
         <li>Instructions</li>
       </Link>
     </ul>

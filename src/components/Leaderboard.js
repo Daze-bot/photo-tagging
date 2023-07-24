@@ -64,7 +64,7 @@ const Leaderboard = () => {
     <div className="leaderboard">
       <div className="leaderboardHeader">
         <h2>Leaderboard</h2>
-        <Link to={'/'}>
+        <Link to={'/photo-tagging/'}>
           <div className="returnMain">
             Main Menu
           </div>

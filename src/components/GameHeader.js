@@ -35,7 +35,7 @@ const GameHeader = (props) => {
       <div className="gameTimer">
         Time: {readTime(props.timer)}
       </div>
-      <Link to={'/'}>
+      <Link to={'/photo-tagging/'}>
         <div className="returnMain">
           Main Menu
         </div>

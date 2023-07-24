@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/photo-tagging/static/css/main.ef6d715a.css",
+    "main.js": "/photo-tagging/static/js/main.58c9512e.js",
+    "static/media/factory.jpg": "/photo-tagging/static/media/factory.7fc0a782191048936b31.jpg",
+    "static/media/pyramidParty.webp": "/photo-tagging/static/media/pyramidParty.cb87c2d8bbb9fe5cbf9c.webp",
+    "static/media/space.webp": "/photo-tagging/static/media/space.331fcd658ea3a1574947.webp",
+    "static/media/homeBackground.svg": "/photo-tagging/static/media/homeBackground.8dc12d0a2cbe362f69e5.svg",
+    "static/media/pirate.webp": "/photo-tagging/static/media/pirate.6e7a9236040689bc02ba.webp",
+    "static/media/TiltPrism.ttf": "/photo-tagging/static/media/TiltPrism.a39a32398249debc0671.ttf",
+    "static/media/beach.jpg": "/photo-tagging/static/media/beach.58af28066d4abe5461e8.jpg",
+    "static/media/pyramidTarget.png": "/photo-tagging/static/media/pyramidTarget.ae3ea4a9313ee0d55a8b.png",
+    "static/media/GameMenu.ttf": "/photo-tagging/static/media/GameMenu.06058058958a51b7d22a.ttf",
+    "static/media/endGame2.jpg": "/photo-tagging/static/media/endGame2.d9353d119e31830ba649.jpg",
+    "static/media/spaceTarget.png": "/photo-tagging/static/media/spaceTarget.6e6ca9ccf6f4b4885974.png",
+    "static/media/pirateTarget.png": "/photo-tagging/static/media/pirateTarget.1befdc7a53e4d867f57b.png",
+    "index.html": "/photo-tagging/index.html",
+    "main.ef6d715a.css.map": "/photo-tagging/static/css/main.ef6d715a.css.map",
+    "main.58c9512e.js.map": "/photo-tagging/static/js/main.58c9512e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef6d715a.css",
+    "static/js/main.58c9512e.js"
+  ]
+}

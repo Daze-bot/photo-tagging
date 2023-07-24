@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './styles/app.css';
 import Home from "./components/Home";
 import Game from "./components/Game";
@@ -24,7 +24,7 @@ const App = () => {
           element={<Instructions />}
         />
         <Route 
-          path="*"
+          path="/photo-tagging/*"
           element={<Home />}
         />
       </Routes>

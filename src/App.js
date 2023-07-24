@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './styles/app.css';
 import Home from "./components/Home";
 import Game from "./components/Game";
@@ -15,8 +15,18 @@ const App = () => {
           path="/photo-tagging/game/" 
           element={<Game />}
         />
-        <Route path="/photo-tagging/leaderboard/" element={<Leaderboard />}/>
-        <Route path="/photo-tagging/instructions/" element={<Instructions />}/>
+        <Route 
+          path="/photo-tagging/leaderboard/" 
+          element={<Leaderboard />}
+        />
+        <Route 
+          path="/photo-tagging/instructions/" 
+          element={<Instructions />}
+        />
+        <Route 
+          path="/photo-tagging/*"
+          element={<Navigate to="/photo-tagging/"/>}
+        />
       </Routes>
     </BrowserRouter>
   )

@@ -376,6 +376,7 @@
   font-size: 1.3rem;
   color: var(--header-blue);
   margin-left: 20px;
+  color: black;
 }
 
 .gameRecap {

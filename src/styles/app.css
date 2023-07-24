@@ -122,7 +122,9 @@
 
 .gameHeader div,
 .leaderboardHeader div,
-.leaderboardHeader h2 {
+.leaderboardHeader h2,
+.instructionsHeader div,
+.instructionsHeader h2 {
   font-family: 'game-menu';
 }
 
@@ -203,14 +205,16 @@
 }
 
 .gameHeader a,
-.leaderboardHeader a {
+.leaderboardHeader a,
+.instructionsHeader a {
   text-decoration: none;
   color: white;
   font-size: 2.5rem;
 }
 
 .gameHeader a:hover,
-.leaderboardHeader a:hover {
+.leaderboardHeader a:hover,
+.instructionsHeader a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -268,7 +272,8 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.leaderboardHeader {
+.leaderboardHeader,
+.instructionsHeader {
   display: flex;
   justify-content: space-between;
   padding: 0 4vw;
@@ -281,7 +286,8 @@
   z-index: 50;
 }
 
-.leaderboardHeader h2 {
+.leaderboardHeader h2,
+.instructionsHeader h2 {
   color: white;
   font-size: 2.5rem;
   font-weight: 300;
@@ -332,6 +338,46 @@
   text-align: end;
 }
 
+.instructionsMain {
+  min-height: calc(100vh - 95px);
+  background-image: url('../imgs/levels/beach.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 15vw;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.98);
+  flex-grow: 1;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px black;
+}
+
+.rules img {
+  width: 150px;
+  margin-left: 20px;
+}
+
+.rules h3 {
+  color: var(--header-blue);
+  font-family: 'game-menu';
+  font-size: 2rem;
+}
+
+.rules p {
+  font-size: 1.3rem;
+  color: var(--header-blue);
+  margin-left: 20px;
+}
+
 .gameRecap {
   min-height: 100vh;
   background-image: url('../imgs/endGame2.jpg');
@@ -358,6 +404,7 @@
 .gameRecap p {
   font-size: 3.5rem;
   font-family: 'game-menu';
+  margin-bottom: 5vh;
 }
 
 .playerNameEntry {
@@ -368,6 +415,7 @@
 }
 
 .playerNameEntry label {
+  font-family: 'game-menu';
   font-size: 1.5rem;
 }
 

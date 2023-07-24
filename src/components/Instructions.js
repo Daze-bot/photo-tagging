@@ -19,6 +19,8 @@ const Instructions = () => {
           <div className="rulesSection">
             <h3>The Game</h3>
             <p>Your goal is to find the hidden characters as quickly as you can!  There are four unique worlds, each with one sneaky character that must be found to advance to the next location.</p>
+            <br></br>
+            <p> Some of the pictures may be longer than the screen so remember to scroll down if you can't seem to find the character!</p>
           </div>
           <div className="rulesSection">
             <h3>Target Window</h3>

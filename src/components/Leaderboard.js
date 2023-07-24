@@ -12,7 +12,7 @@ const Leaderboard = () => {
   const getTimes = async () => {
     const tempArray = [];
 
-    const q = query(collection(db, 'scores'), orderBy('time'), limit(20));
+    const q = query(collection(db, 'scores'), orderBy('time'), limit(100));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       tempArray.push(doc.data());

@@ -1481,7 +1481,8 @@ const wordExceptions = [
   "sass",
   "tass",
   "again",
-  "unknown"
+  "unknown",
+  "abosch"
   ]
 
   export default wordExceptions;

@@ -22,9 +22,14 @@ const Leaderboard = () => {
   };
 
   // Some very edge cases can make it through the check or be flagged false positive
-  const checkBadWords = (string) => {
+  const checkBadWords = (string, allowName = false) => {
     const splitString = string.split(" ");
     const wordsToCheck = [];
+
+    // Allows false positives to be manually pushed through via Firebase
+    if (allowName) {
+      return false;
+    }
 
     if (allBadWords.includes(string.replace(/\W/g, '').replace(/\s/g, '').toLowerCase())) {
       return true;
@@ -47,7 +52,7 @@ const Leaderboard = () => {
     <li key={index}>
       <div className="timeListItem">
         <p className="timeRank">{index + 1}</p>
-        {checkBadWords(time.name)
+        {checkBadWords(time.name, time.forceAllow)
           ? <p className="timeName">{time.name.replace(/./g, '*')}</p>
           : <p className="timeName">{time.name}</p>
         }

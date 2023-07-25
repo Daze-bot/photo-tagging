@@ -61,7 +61,8 @@ const Game = () => {
     try {
       await addDoc(collection(db, 'scores'), {
         name: name,
-        time: timer
+        time: timer,
+        forceAllow: false
       });
     } catch (e) {
       console.error("Error adding score:", e);

@@ -4,7 +4,7 @@ This is a Where's Waldo inspired app, where users must find a series of hidden i
 
 <div align="center">
   <kbd>
-    <img src="![photo-finder](https://github.com/Daze-bot/photo-tagging/assets/103719501/4b0d35dc-7066-44d1-8c7a-64446d26d20e)"/>
+    <img src="https://i.imgur.com/erCbWmk.png" />
   </kbd>
 </div>
 

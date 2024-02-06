@@ -1,6 +1,6 @@
 # Photo Finder
 
-This is a Where's Waldo inspired app, where users must find a series of hidden images in order to progress to the next round and ultimately enter their final score on the global leaderboard
+A Where's Waldo inspired photo tagging app
 
 <div align="center">
   <kbd>
@@ -10,17 +10,19 @@ This is a Where's Waldo inspired app, where users must find a series of hidden i
 
 ## Description
 
-Longer description explaining the rationale/intent behind the project, what it's good for, and how it works. If the next two subsections are short enough, they can be merged up into this block—perhaps as bulleted lists.
+Users must find a series of hidden images within a crowded picture in order to progress to the next round.  The user's time is kept throughout the game and upon finding all of the images, the final time is entered in the global leaderboard
 
 ### Features
 
-- It's TINY. A short README is a good README.
-- List other standout qualities that'll make a potential user want to try out your project.
+- Instructions
+- Interactive gameplay
+- Leaderboards
 
 ### Built with
 
-- Markdown
-- Love
+- React
+- React-Router
+- Firebase
 
 ## Getting started
 

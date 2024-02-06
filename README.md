@@ -34,8 +34,8 @@ Users must find a series of hidden images within a crowded picture in order to p
 ### Install
 
 - Clone the github repository
-- run ```bash npm install``` to install all dependencies
-- run ```bash npm run start``` to open a locally hosted version of the app
+- run ```npm install``` to install all dependencies
+- run ```npm run start``` to open a locally hosted version of the app
 
 ### Usage
 

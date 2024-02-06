@@ -46,6 +46,8 @@ Users must find a series of hidden images within a crowded picture in order to p
   </kbd>
 </div>
 
+<br>
+
 - Submitting final score:
 <div align="center">
   <kbd>

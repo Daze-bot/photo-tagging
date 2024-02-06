@@ -28,15 +28,14 @@ Users must find a series of hidden images within a crowded picture in order to p
 
 ### Prerequisites
 
-Dependencies not explicitly covered in the installation process; e.g., OS restrictions.
+- Built on Ubuntu 20.04
+- install npm on local machine
 
 ### Install
 
-Ideally, write a script whose usage is described here.
-
-### Configure
-
-Manual, context-specific tasks not covered in the installation process.
+- Clone the github repository
+- run ```bash npm install``` to install all dependencies
+- run ```bash npm run start``` to open a locally hosted version of the app
 
 ### Usage
 

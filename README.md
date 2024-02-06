@@ -16,7 +16,7 @@ Users must find a series of hidden images within a crowded picture in order to p
 
 ### Features
 
-- Instructions
+- Site navigation
 - Interactive gameplay
 - Leaderboards
 
@@ -24,7 +24,7 @@ Users must find a series of hidden images within a crowded picture in order to p
 
 - React
 - React-Router
-- Firebase
+- GitHub pages
 
 ## Getting started
 

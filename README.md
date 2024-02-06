@@ -12,6 +12,9 @@ A Where's Waldo inspired photo tagging app
 
 Users must find a series of hidden images within a crowded picture in order to progress to the next round.  The user's time is kept throughout the game and upon finding all of the images, the final time is entered in the global leaderboard
 
+### <a href="https://daze-bot.github.io/photo-tagging/">View Live</a>
+
+
 ### Features
 
 - Instructions

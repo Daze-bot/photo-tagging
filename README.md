@@ -42,7 +42,6 @@ Users must find a series of hidden images within a crowded picture in order to p
 <div align="center">
   <kbd>
     <img src="https://giphy.com/gifs/0ZTQ7z3tNoiSM1CV8r.gif" />
-    <iframe src="https://giphy.com/embed/0ZTQ7z3tNoiSM1CV8r" width="480" height="238" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/0ZTQ7z3tNoiSM1CV8r">via GIPHY</a></p>
   </kbd>
 </div>
 

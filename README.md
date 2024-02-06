@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Photo Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Where's Waldo inspired app, where users must find a series of hidden images in order to progress to the next round and ultimately enter their final score on the global leaderboard
 
-## Available Scripts
+<div align="center">
+  <kbd>
+    <img src="https://imgur.com/a/BJfICv8" />
+  </kbd>
+</div>
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Longer description explaining the rationale/intent behind the project, what it's good for, and how it works. If the next two subsections are short enough, they can be merged up into this block—perhaps as bulleted lists.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- It's TINY. A short README is a good README.
+- List other standout qualities that'll make a potential user want to try out your project.
 
-### `npm test`
+### Built with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Markdown
+- Love
 
-### `npm run build`
+## Getting started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Dependencies not explicitly covered in the installation process; e.g., OS restrictions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Install
 
-### `npm run eject`
+Ideally, write a script whose usage is described here.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Configure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Manual, context-specific tasks not covered in the installation process.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+GIFs are useful here to see the project in action.
 
-## Learn More
+### Troubleshooting
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Or FAQs, if that's more appropriate.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Back matter
 
-### Code Splitting
+### Legal disclaimer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Usage of this tool for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
-### Analyzing the Bundle Size
+### Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Thanks to all who helped inspire this template.
 
-### Making a Progressive Web App
+### See also
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [A simple README.md template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
+- [A template to make good README.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+- [A sample README for all your GitHub projects](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+- [A simple README.md template to kickstart projects](https://github.com/me-and-company/readme-template)
 
-### Advanced Configuration
+### To-do
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [ ] Still need to do this
+- [ ] ~~Decided not to do this~~
+- [x] Done!
 
-### Deployment
+### License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE.md).

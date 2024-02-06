@@ -39,6 +39,14 @@ Users must find a series of hidden images within a crowded picture in order to p
 
 ### Usage
 
+- Navigating the menu:
+<div align="center">
+  <kbd>
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjRoMm5pczZrNHlmbmQ0ZWRqdGRiNWF0ZnNneWJoaWpndXk1ZzkxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0ZTQ7z3tNoiSM1CV8r/giphy.gif"/>
+  </kbd>
+</div>
+
+- Submitting final score:
 <div align="center">
   <kbd>
     <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjRoMm5pczZrNHlmbmQ0ZWRqdGRiNWF0ZnNneWJoaWpndXk1ZzkxdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0ZTQ7z3tNoiSM1CV8r/giphy.gif"/>
